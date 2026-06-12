@@ -17,6 +17,6 @@ public class TestController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello V5 New";
+        return "Hello to check db";
     }
 }

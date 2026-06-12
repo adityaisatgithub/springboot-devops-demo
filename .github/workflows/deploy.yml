@@ -30,8 +30,8 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t adityaicd2016/spring-demo:v${{ github.run_number }} .
-          docker tag adityaicd2016/spring-demo:v${{ github.run_number }} adityaicd2016/spring-demo:latest
+          docker build -t adityaicd2016/spring-demo:${{ github.run_number }} .
+          docker tag adityaicd2016/spring-demo:${{ github.run_number }} adityaicd2016/spring-demo:latest
 
       - name: Push Docker Images
         run: |

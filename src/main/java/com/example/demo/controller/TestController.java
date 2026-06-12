@@ -17,6 +17,6 @@ public class TestController {
 
     @GetMapping("/")
     public String home() {
-        return "Spring Boot Application is Running";
+        return "Hello V2";
     }
 }

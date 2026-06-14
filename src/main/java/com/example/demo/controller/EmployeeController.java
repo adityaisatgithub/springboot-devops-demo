@@ -8,7 +8,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+
+        "http://localhost:5173",
+
+        "https://jolly-beach-0b7cf3f0f.7.azurestaticapps.net"
+
+})
 @RestController
 public class EmployeeController {
 

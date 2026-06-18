@@ -2,9 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.repository.EmployeeRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +25,10 @@ public class EmployeeController {
     @GetMapping("/employees")
     public List<Employee> getEmployees() {
         return employeeRepository.findAll();
+    }
+
+    @PostMapping("/employees")
+    public Employee addEmployee(@RequestBody Employee employee) {
+        return employeeRepository.save(employee);
     }
 }
